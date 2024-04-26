@@ -42,12 +42,12 @@ p2<-replace(p2,p2>="Disagree",2)
 p2<-replace(p2,p2>="Neutral",3)
 p2<-replace(p2,p2>="Agree",4)
 p2<-replace(p2,p2>="Strongly Agree",5)
-p2<-as.numeric(p2$p21)
+p2<-as.numeric(p2$p2)
 p2mean<-mean(p2)
 p2sd<-sd(p2)
 
 p3<-survey$`Using the app increases my satisfaction with the food delivery process`
-p3<-as.data.frame(p2)
+p3<-as.data.frame(p3)
 p3<-replace(p3,p3>="Strongly Disagree",1)
 p3<-replace(p3,p3>="Disagree",2)
 p3<-replace(p3,p3>="Neutral",3)
@@ -112,6 +112,13 @@ e4 <- as.numeric(e4$e4)
 e4mean <- mean(e4)
 e4sd <- sd(e4)
 
+survsumtable <- data.frame(
+  Variable = c("p1","p2","p3","p4","e1","e2","e3","e4"),
+  Mean = c(p1mean, p2mean, p3mean, p4mean, e1mean, e2mean, e3mean, e4mean),
+  SD = c(p1sd, p2sd, p3sd, p4sd, e1sd, e2sd, e3sd, e4sd)
+)
+
+survsumtable
 
 
 
