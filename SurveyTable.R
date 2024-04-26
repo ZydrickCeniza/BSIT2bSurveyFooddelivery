@@ -423,6 +423,7 @@ ggplot(f2s, aes(x = f2)) +
 #f3
 f3<-survey$`The app is compatible with other device I use for ordering food`
 f3s <- data.frame(f3)
+
 ggplot(f3s, aes(x = f3)) +
   geom_bar(fill = "blue", alpha = 0.5) + 
   labs(title = "Bar Plot of Scale Values of people who find the food delivery app as intimidating",
