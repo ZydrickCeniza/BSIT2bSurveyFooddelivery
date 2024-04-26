@@ -112,10 +112,87 @@ e4 <- as.numeric(e4$e4)
 e4mean <- mean(e4)
 e4sd <- sd(e4)
 
+s1 <- survey$`People who influence my dining choices think that I should use the app`
+s1 <- as.data.frame(s1)
+s1 <- replace(s1, s1 >= "Strongly Disagree", 1)
+s1 <- replace(s1, s1 >= "Disagree", 2)
+s1 <- replace(s1, s1 >= "Neutral", 3)
+s1 <- replace(s1, s1 >= "Agree", 4)
+s1 <- replace(s1, s1 >= "Strongly Agree", 5)
+s1 <- as.numeric(s1$s1)
+s1mean <- mean(s1)
+s1sd <- sd(s1)
+
+s2 <- survey$`People who are important to me recommend using the food delivery app`
+s2 <- as.data.frame(s2)
+s2 <- replace(s2, s2 >= "Strongly Disagree", 1)
+s2 <- replace(s2, s2 >= "Disagree", 2)
+s2 <- replace(s2, s2 >= "Neutral", 3)
+s2 <- replace(s2, s2 >= "Agree", 4)
+s2 <- replace(s2, s2 >= "Strongly Agree", 5)
+s2 <- as.numeric(s2$s2)
+s2mean <- mean(s2)
+s2sd <- sd(s2)
+
+s3 <- survey$`Using the app helps me to put more time to other chores`
+s3 <- as.data.frame(s3)
+s3 <- replace(s3, s3 >= "Strongly Disagree", 1)
+s3 <- replace(s3, s3 >= "Disagree", 2)
+s3 <- replace(s3, s3 >= "Neutral", 3)
+s3 <- replace(s3, s3 >= "Agree", 4)
+s3 <- replace(s3, s3 >= "Strongly Agree", 5)
+s3 <- as.numeric(s3$s3)
+s3mean <- mean(s3)
+s3sd <- sd(s3)
+
+s4 <- survey$`In general, the food delivery app organization has supported its use`
+s4 <- as.data.frame(s4)
+s4 <- replace(s4, s4 >= "Strongly Disagree", 1)
+s4 <- replace(s4, s4 >= "Disagree", 2)
+s4 <- replace(s4, s4 >= "Neutral", 3)
+s4 <- replace(s4, s4 >= "Agree", 4)
+s4 <- replace(s4, s4 >= "Strongly Agree", 5)
+s4 <- as.numeric(s4$s4)
+s4mean <- mean(s4)
+s4sd <- sd(s4)
+
+f1 <- survey$`I have the resources necessary to use the food delivery app`
+f1 <- as.data.frame(f1)
+f1 <- replace(f1, f1 >= "Strongly Disagree", 1)
+f1 <- replace(f1, f1 >= "Disagree", 2)
+f1 <- replace(f1, f1 >= "Neutral", 3)
+f1 <- replace(f1, f1 >= "Agree", 4)
+f1 <- replace(f1, f1 >= "Strongly Agree", 5)
+f1 <- as.numeric(f1$f1)
+f1mean <- mean(f1)
+f1sd <- sd(f1)
+
+f2 <- survey$`I have the knowledge required to use the app effectively`
+f2 <- as.data.frame(f2)
+f2 <- replace(f2, f2 >= "Strongly Disagree", 1)
+f2 <- replace(f2, f2 >= "Disagree", 2)
+f2 <- replace(f2, f2 >= "Neutral", 3)
+f2 <- replace(f2, f2 >= "Agree", 4)
+f2 <- replace(f2, f2 >= "Strongly Agree", 5)
+f2 <- as.numeric(f2$f2)
+f2mean <- mean(f2)
+f2sd <- sd(f2)
+
+f3 <- survey$`The app is compatible with other device I use for ordering food`
+f3 <- as.data.frame(f3)
+f3 <- replace(f3, f3 >= "Strongly Disagree", 1)
+f3 <- replace(f3, f3 >= "Disagree", 2)
+f3 <- replace(f3, f3 >= "Neutral", 3)
+f3 <- replace(f3, f3 >= "Agree", 4)
+f3 <- replace(f3, f3 >= "Strongly Agree", 5)
+f3 <- as.numeric(f3$f3)
+f3mean <- mean(f3)
+f3sd <- sd(f3)
+
 survsumtable <- data.frame(
-  Variable = c("p1","p2","p3","p4","e1","e2","e3","e4"),
-  Mean = c(p1mean, p2mean, p3mean, p4mean, e1mean, e2mean, e3mean, e4mean),
-  SD = c(p1sd, p2sd, p3sd, p4sd, e1sd, e2sd, e3sd, e4sd)
+  Variable = c("p1","p2","p3","p4","e1","e2","e3","e4","s1","s2","s3","s4","f1","f2","f3"),
+  Mean = c(p1mean, p2mean, p3mean, p4mean, e1mean, e2mean, e3mean, e4mean, s1mean, s2mean, s3mean, s4mean, f1mean, f2mean, f3mean),
+  SD = c(p1sd, p2sd, p3sd, p4sd, e1sd, e2sd, e3sd, e4sd, s1sd, s2sd, s3sd, s4sd, f1sd, f2sd, f3sd)
 )
 
 survsumtable
