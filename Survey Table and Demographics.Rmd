@@ -47,8 +47,6 @@ experience<-replace(experience,experience>="Satisfied",1)
 experience<-replace(experience,experience>="Average",2)
 experience<-replace(experience,experience>="Disatisfied",3)
 
-experience
-
 survey$`How satisfied were you with the overall experience of ordering food through food deliveries service?`<-experience
 
 scale<-survey$`On a scale of 1 to 10, how would you rate the quality of the food you received?`
