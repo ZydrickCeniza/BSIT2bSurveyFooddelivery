@@ -171,15 +171,15 @@ s2 <-  recode(s2,
 s2mean <- mean(s2)
 s2sd <- sd(s2)
 
-<<<<<<< HEAD
+
 survey$`People who are important to me recommend using the food delivery app`<-s2
 survey$`Social Influence 2`<-survey$`People who are important to me recommend using the food delivery app`
-=======
+
 survey$`People who influence my dining choices think that I should use the app`<-s2
 
 survey$`People who are important to me recommend using the food delivery app`<-s2
 
->>>>>>> f905ecc1768bd9699977854690b1d7d33372c1eb
+
 
 s3 <-survey$`Using the app helps me to put more time to other chores`
 s3 <-  recode(s3,
@@ -588,4 +588,5 @@ ggplot(f3s, aes(x = f3)) +
        x = "Scale Values",
        y = "Count") +
   scale_fill_hue(name = "Scale Value")
+
 ```
